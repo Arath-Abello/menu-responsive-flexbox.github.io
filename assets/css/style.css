@@ -32,7 +32,6 @@ nav ul{
 @media screen and (max-width: 992px){
     .checkbtn{
         display: block;
-        line-height: 50px;
     }
     nav{
         flex-direction: row-reverse;
