@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    height: 500vh
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+}
+
+.logo{
+    width: 120px;
+}
+
+nav ul{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#check, .checkbtn{
+    display: none;
+}
+
+@media screen and (max-width: 992px){
+    .checkbtn{
+        display: block;
+        line-height: 50px;
+    }
+    nav{
+        flex-direction: row-reverse;
+        }
+    nav ul{
+        width: 100%;
+        position: fixed;
+        flex-direction: column;
+        top: 50px;
+        text-align: center;
+        left: -100%;
+        background-color: brown;
+        margin: 0px;
+        transition: all 300ms;
+    }
+    
+    #check:checked ~ ul{
+        left: 0px;
+        transition: all 300ms;
+    }
+}
+
